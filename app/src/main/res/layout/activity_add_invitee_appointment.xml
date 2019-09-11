@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.employee.AddInviteeAppointmentActivity">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/ic_launcher" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_below="@id/image"
+                android:layout_marginRight="30dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/add_invitee_title_label_style"
+                    android:text="Invities Appointment" />
+
+                <TextView
+                    style="@style/add_invitee_label_style"
+                    android:text="@string/add_invitee_name" />
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/add_invitee_appointment_label_invitee_name"
+                        style="@style/add_invitee_input_style_mobile"
+                        android:inputType="textPersonName|textCapWords"
+                        android:hint="@string/add_invitee_name_input_hint" />
+
+
+                <TextView
+                    style="@style/add_invitee_label_style"
+                    android:text="@string/add_invitee_email_address" />
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/add_invitee_appointment_label_invitee_email"
+                        style="@style/add_invitee_input_style_mobile"
+                        android:inputType="textEmailAddress"
+                        android:hint="@string/add_invitee_email_input_hint" />
+
+                <TextView
+                    style="@style/add_invitee_label_style"
+                    android:text="@string/add_invitee_mobile" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/add_invitee_appointment_label_invitee_mobile"
+                        style="@style/add_invitee_input_style_mobile"
+                        android:inputType="phone"
+                        android:hint="@string/add_invitee_mobile_no_hint" />
+
+                <TextView
+                    style="@style/add_invitee_label_style"
+                    android:text="@string/add_invitee_select_purpose" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/purposes_recycle_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"/>
+            </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+            <com.ebanx.swipebtn.SwipeButton
+                android:id="@+id/swipe_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:button_background="@drawable/shape_button"
+                app:button_image_disabled="@drawable/velsol"
+                app:button_image_enabled="@drawable/velsol"
+                app:button_image_height="60dp"
+                app:button_image_width="100dp"
+                app:has_activate_state="true"
+                app:initial_state="disabled"
+                app:inner_text="SET InVITEE ARrIVAL"
+                app:inner_text_background="@color/black"
+                app:inner_text_bottom_padding="18dp"
+                app:inner_text_color="@android:color/white"
+                app:inner_text_size="30dp"
+                app:inner_text_top_padding="18dp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

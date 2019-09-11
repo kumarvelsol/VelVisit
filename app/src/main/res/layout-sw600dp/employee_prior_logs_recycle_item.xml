@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:weightSum="1">
+        <TextView
+            android:layout_weight=".20"
+            android:text="Invitees Name"
+            android:gravity="center|left"
+            style="@style/employee_prio_logs_item_label_style" />
+        <TextView
+            style="@style/employee_prio_logs_item_label_style"
+            android:layout_weight=".25"
+            android:gravity="center|left"
+            android:text="Schedule ON"/>
+        <TextView
+            android:layout_weight=".15"
+            android:gravity="center|left"
+            style="@style/employee_prio_logs_item_label_style"
+            android:text="Status"/>
+        <TextView
+            style="@style/employee_prio_logs_item_label_style"
+            android:layout_weight=".40"
+            android:gravity="center|left"
+            android:text="Actions"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/employee_prio_logs_item_layout_label_invitee_name"
+            android:layout_weight=".20"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:gravity="center|left"
+            android:text="Invitees Name"
+            style="@style/employee_prior_logs_item_values_styles" />
+        <TextView
+            android:id="@+id/employee_prio_logs_item_layout_label_scheduled_on"
+            style="@style/employee_prior_logs_item_values_styles"
+            android:layout_weight=".25"
+            android:textSize="14dp"
+            android:gravity="center|left"
+            android:text="Scheduled Time"/>
+        <TextView
+            android:id="@+id/employee_prio_logs_item_layout_label_status"
+            style="@style/employee_prior_logs_item_values_styles"
+            android:layout_weight=".15"
+            android:textSize="10dp"
+            android:gravity="center"
+            android:background="@drawable/black_ash_shape_background"
+            android:text="status"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".40"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/employee_prio_logs_item_layout_label_reschedule"
+                style="@style/employee_prior_logs_item_values_styles"
+                android:textSize="12dp"
+                android:layout_weight=".5"
+                android:gravity="center|left"
+                android:text="Reschedule"/>
+            <TextView
+                android:id="@+id/employee_prio_logs_item_layout_label_cancel"
+                style="@style/employee_prior_logs_item_values_styles"
+                android:textSize="12dp"
+                android:layout_weight=".5"
+                android:gravity="center|left"
+                android:text="Cancel"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
